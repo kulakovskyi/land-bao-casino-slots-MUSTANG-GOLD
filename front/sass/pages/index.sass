@@ -107,6 +107,28 @@ body
     &-btn
       span
         padding: 20px 31px 14px
+    &-img
+      &::before
+        content: ''
+        position: absolute
+        top: 71px
+        left: -2px
+        width: 245px
+        height: 89px
+        background: url("../img/slots/freespin.png") no-repeat 50% 0/contain
+        animation: scaleWin 1s ease infinite
+  &__firstWin
+    &-img
+      &::before
+        content: ''
+        position: absolute
+        top: 71px
+        left: -2px
+        width: 245px
+        height: 89px
+        background: url("../img/slots/percent.png") no-repeat 50% 0/contain
+        animation: scaleWin 1s ease infinite
+
 
 .bao
   width: 100%
@@ -186,7 +208,7 @@ body
     top: -20px
   &__machine
     width: 870px
-    height: 835px
+    height: 746px
     @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
       background: url('../img/slots/casino-desc.png') no-repeat 50% 0/contain
     @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
@@ -240,8 +262,8 @@ body
     left: 50%
     transform: translate(-50%, -50%) scaleX(-1) rotate(180deg)
     transform-origin: center
-    height: 587px
-    width: 614px
+    height: 590px
+    width: 680px
     padding: 0 3px
     display: flex
     justify-content: center
@@ -274,16 +296,62 @@ body
       animation-delay: 1.6s
       animation-iteration-count: 1
       animation-fill-mode: forwards
-      width: 100%
+      width: 114%
       height: 100%
       top: 0
-      left: 0
+      left: 50%
+      transform: translateX(-50%)
 
 
 .start2,
 .star3,
 .bao__none
   display: none
+
+
+
+.win-text,
+.win-text2
+  left: 11px
+  width: 220px
+  height: 100%
+  position: absolute
+  z-index: 6
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  margin: -13px 5px 0 0
+  transform: scale(1, -1)
+  opacity: 0
+  visibility: hidden
+  transition: opacity .5s ease , visibility .5s ease
+  &._add
+    opacity: 1
+    visibility: visible
+
+.win-text
+
+  .text
+    width: 161px
+    height: 95px
+    animation: 1s scaleText infinite
+    background: url("../img/slots/percent.png") no-repeat 50% 0/contain
+    &:nth-child(2)
+      margin: 100px 0
+
+.win-text2
+  left: 231px
+  .text
+    width: 161px
+    height: 95px
+    animation: 1s scaleText infinite
+    background: url("../img/slots/freespin.png") no-repeat 50% 0/contain
+    &:nth-child(2)
+      margin: 100px 0
+
+
+
 
 //fire efect
 .win-fire,
@@ -364,14 +432,14 @@ body
 
 @keyframes flame
   0%
-    height: 200px
-    width: 200px
-  50%
     height: 180px
     width: 180px
+  50%
+    height: 160px
+    width: 160px
   100%
-    height: 200px
-    width: 200px
+    height: 180px
+    width: 180px
 
 
 .opacity
@@ -446,6 +514,24 @@ body
     transform: scale(-1.03, 1.03) rotate(180deg)
   100%
     transform: scale(-1, 1) rotate(180deg)
+
+
+@keyframes scaleText
+  0%
+    transform: scale(-1, -1) rotate(180deg)
+  50%
+    transform: scale(-1.03, -1.03) rotate(180deg)
+  100%
+    transform: scale(-1, -1) rotate(180deg)
+
+
+@keyframes scaleWin
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.03)
+  100%
+    transform: scale(1)
 
 
 //confetti

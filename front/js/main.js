@@ -97,6 +97,10 @@ let firstwinAnim = document.querySelector('.win-fire')
 let secondwinAnim = document.querySelector('.win-fire-blue')
 let firstWinScale = document.querySelectorAll('.win-scale')
 let secondWinScale = document.querySelectorAll('.win-scale-blue')
+
+let firstWinAnimText = document.querySelector('.win-text');
+let secondWinAnimText = document.querySelector('.win-text2');
+
 let counter = ''
 
 btn.addEventListener('click', ()=> {
@@ -112,6 +116,7 @@ firstWinBtn.addEventListener('click', ()=> {
     col2.classList.remove('win')
     col3.classList.remove('win')
     firstwinAnim.classList.remove('_add')
+    firstWinAnimText.classList.remove('_add')
     firstWinScale.forEach(item=>{
         item.classList.remove('_add')
     })
@@ -167,6 +172,7 @@ function spin(elem) {
                 textWin.classList.add('visible')
                 setTimeout(() => {
                     firstwinAnim.classList.add('_add')
+                    firstWinAnimText.classList.add('_add')
                     firstWinScale.forEach(item=>{
                         item.classList.add('_add')
                     })
@@ -192,9 +198,9 @@ function spin(elem) {
                     win2[0].setAttribute('src', 'img/slots/win1.png');
                     win2[1].setAttribute('src', 'img/slots/win7.png');
                     win2[2].setAttribute('src', 'img/slots/win6.png');
-                    win2[3].setAttribute('src', 'img/slots/win3.png');
-                    win2[4].setAttribute('src', 'img/slots/win3.png');
-                    win2[5].setAttribute('src', 'img/slots/win3.png');
+                    win2[3].setAttribute('src', 'img/slots/win3-anim.gif');
+                    win2[4].setAttribute('src', 'img/slots/win3-anim.gif');
+                    win2[5].setAttribute('src', 'img/slots/win3-anim.gif');
                     win2[6].setAttribute('src', 'img/slots/win5.png');
                     win2[7].setAttribute('src', 'img/slots/win3.png');
                     win2[8].setAttribute('src', 'img/slots/win4.png');
@@ -224,6 +230,7 @@ function spin(elem) {
                 col3.classList.add('win')
                 setTimeout(() => {
                     secondwinAnim.classList.add('_add')
+                    secondWinAnimText.classList.add('_add')
                     secondWinScale.forEach(item=>{
                         item.classList.add('_add')
                     })
