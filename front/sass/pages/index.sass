@@ -1,0 +1,507 @@
+$blue: #000055
+$magenta: #ff267e
+$green: #05C489
+$green-hover: #09B47F
+$gray: #EDEDED
+$text: #292929
+
+$gilroy-500: Gilroy-500, sans-serif
+$gilroy-800: Gilroy-800, sans-serif
+$gilroy-900: Gilroy-900, sans-serif
+
+
+body
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  overscroll-behavior: none
+  background: $blue
+  img,
+  picture
+    max-width: 100%
+    height: auto
+
+.container
+  //max-width: 1440px
+  margin: 0 auto
+  padding: 0 60px 0 80px
+  height: 100%
+
+.bao
+  &__overlay
+    padding: 15px
+    opacity: 1
+    visibility: visible
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(2, 5, 41, 0.85)
+    z-index: 20
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: opacity .5s linear, visibility .5s linear
+  &__firstWin,
+  &__secondWin
+    padding: 130px 50px 64px
+    background: linear-gradient(236.85deg, #7A30BF -6.33%, #38186E 42.2%, #241243 98.81%)
+    border-radius: 50px
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    &-img
+      max-width: 234px
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      top: -100px
+    &-win
+      font-family: $gilroy-800
+      font-size: 29px
+      line-height: 38px
+      text-align: center
+      letter-spacing: 0.04em
+      text-transform: uppercase
+      color: #FFFFFF
+      margin: 0 0 5px 0
+    &-dep
+      font-family: $gilroy-900
+      font-size: 62px
+      line-height: 81px
+      text-align: center
+      letter-spacing: 0.01em
+      text-transform: uppercase
+      color: #FAE700
+      margin: 0 0 40px 0
+    &-btn
+      text-align: center
+      display: inline-block
+      padding: 9px 8px
+      background: linear-gradient(180deg, #572F9D 0%, #2D1A51 100%)
+      border: 2px solid #F8E71C
+      border-radius: 100px
+      cursor: pointer
+      transition: border .3s ease
+      &:hover
+        border: 2px solid #beb651
+      &-wrap
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%)
+        box-shadow: inset 0px 2px 6px rgba(255, 255, 255, 0.2)
+        filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.35))
+        border-radius: 100px
+      span
+        font-family: $gilroy-800
+        font-size: 26px
+        line-height: 30px
+        letter-spacing: 0.1em
+        text-transform: uppercase
+        display: inline-block
+        padding: 20px 62px 14px
+        background: linear-gradient(180deg, #FCF16A 0%, #FAE700 12.89%, #FAE700 60.28%, #998E00 87.89%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        background-clip: text
+        text-fill-color: transparent
+  &__secondWin
+    &-btn
+      span
+        padding: 20px 31px 14px
+
+.bao
+  width: 100%
+  height: 100%
+  overflow: hidden
+  position: relative
+  @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
+    background: url('../img/bg-desc.jpg') no-repeat 50% 0/cover
+  @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+    background: url('../img/bg-tab.jpg') no-repeat 50% 0/cover
+  @media screen and (max-width: 600px) and (orientation: portrait)
+    background: url("../img/bg-mob.jpg") no-repeat 50% 0/cover
+  @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+    background: url("../img/bg-landscape.jpg") no-repeat 50% 0/cover
+
+  &__row
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: 100%
+  &__info
+    flex: 1 1 auto
+  &__logo
+    margin: 0 0 70px 0
+  &__title
+    display: flex
+    flex-direction: column
+    margin: 0 0 40px 0
+    &-top
+      margin: 0 0 17px 0
+    &-top,
+    &-bottom
+      font-family: $gilroy-800
+      font-size: 98px
+      line-height: 81px
+      letter-spacing: 0.01em
+      text-transform: uppercase
+      color: #FAE700
+      white-space: nowrap
+  &__text
+    font-family: $gilroy-500
+    font-size: 29px
+    line-height: 38px
+    letter-spacing: 0.04em
+    color: #FFFFFF
+    margin: 0 0 75px 0
+  &__btn
+    display: inline-block
+    padding: 9px 8px
+    background: linear-gradient(180deg, #572F9D 0%, #2D1A51 100%)
+    border: 2px solid #F8E71C
+    border-radius: 100px
+    cursor: pointer
+    transition: border .3s ease
+    &:hover
+      border: 2px solid #beb651
+    &-wrap
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%)
+      box-shadow: inset 0px 2px 6px rgba(255, 255, 255, 0.2)
+      filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.35))
+      border-radius: 100px
+    span
+      font-family: $gilroy-800
+      font-size: 26px
+      line-height: 30px
+      letter-spacing: 0.1em
+      text-transform: uppercase
+      display: inline-block
+      padding: 20px 83px 14px
+      background: linear-gradient(180deg, #FCF16A 0%, #FAE700 12.89%, #FAE700 60.28%, #998E00 87.89%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      background-clip: text
+      text-fill-color: transparent
+  &__slot
+    position: relative
+    top: -20px
+  &__machine
+    width: 870px
+    height: 835px
+    @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
+      background: url('../img/slots/casino-desc.png') no-repeat 50% 0/contain
+    @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+      background: url('../img/slots/casino-desc.png') no-repeat 50% 0/contain
+    @media screen and (max-width: 600px) and (orientation: portrait)
+      background: url("../img/slots/casino-mob.png") no-repeat 50% 0/contain
+    @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+      background: url("../img/slots/casino-mob.png") no-repeat 50% 0/contain
+  &__cat
+    width: 452px
+    height: 457px
+    position: absolute
+    bottom: -88px
+    left: -261px
+    z-index: 2
+    @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
+      background: url('../img/cat-desc.png') no-repeat 50% 0/contain
+    @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+      background: url('../img/cat-tab.png') no-repeat 50% 0/contain
+    @media screen and (max-width: 600px) and (orientation: portrait)
+      background: url("../img/cat-mob.png") no-repeat 50% 0/contain
+    @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+      background: url("../img/cat-mob.png") no-repeat 50% 0/contain
+  &__textWin
+    font-family: $gilroy-800
+    font-size: 22px
+    line-height: 81px
+    letter-spacing: 0.01em
+    text-transform: uppercase
+    color: #FFFFFF
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    bottom: -50px
+    opacity: 0
+    visibility: hidden
+    transition: opacity .5s linear, visibility .5s linear
+    br
+      display: none
+    &.visible
+      visibility: visible
+      animation: visible 1s ease
+      animation-delay: 1.6s
+      animation-iteration-count: 1
+      animation-fill-mode: forwards
+
+  .window
+    position: absolute
+    overflow: hidden
+    top: 56.089%
+    left: 50%
+    transform: translate(-50%, -50%) scaleX(-1) rotate(180deg)
+    transform-origin: center
+    height: 587px
+    width: 614px
+    padding: 0 3px
+    display: flex
+    justify-content: center
+    align-items: flex-start
+
+    img
+      transform-origin: center
+      transform: scaleX(-1) rotate(180deg)
+
+  .outer-col
+    width: 33%
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0 3px
+
+  .col
+    padding: 0
+    max-width: 192px
+
+  .col-one.win,
+  .col-two.win,
+  .col-three.win
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      z-index: 1
+      animation: winSlot 1s ease
+      animation-delay: 1.6s
+      animation-iteration-count: 1
+      animation-fill-mode: forwards
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+
+
+.start2,
+.star3,
+.bao__none
+  display: none
+
+//fire efect
+.win-fire,
+.win-fire-blue
+  width: 220px
+  height: 100%
+  position: absolute
+  z-index: -1
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin: -18px 5px 0 0
+  opacity: 0
+  visibility: hidden
+  transition: opacity .5s ease , visibility .5s ease
+  &._add
+    opacity: 1
+    visibility: visible
+  .flame
+    width: 200px
+    height: 200px
+    background: linear-gradient(-45deg, red, orange)
+    border-radius: 150px 150px 0px 150px
+    transform: rotate(-135deg)
+    animation: 1.3s flame infinite
+    filter: blur(10px)
+    position: relative
+    box-shadow: 17px 20px 90px #700
+    border: 45px solid black
+    border-left-width: 25px
+    border-top-width: 25px
+    &:first-child
+      margin-top: 108px
+      margin-right: 51px
+    &:nth-child(2)
+      margin-right: 51px
+      margin-top: 44px
+      margin-bottom: 50px
+    &:nth-child(3)
+      margin-right: 55px
+      margin-bottom: -50px
+    &:after,
+    &:before
+      content: ''
+      width: 100px
+      height: 100px
+      display: block
+      position: absolute
+      background: linear-gradient(-45deg, #ef6b19, orange)
+      animation: 2.3s flame infinite
+      transform: scale(.8) rotate(20deg)
+      border-radius: 100px 100px 0 100px
+      top: 20px
+    &:before
+      top: 0
+      animation-duration: 1.2s
+      transform: scale(.9) rotate(-15deg) translate(10px, 0px)
+
+
+.win-fire-blue
+  margin: 8px 5px 0 0
+  .flame
+    background: linear-gradient(-45deg, red, orange)
+    box-shadow: 17px 20px 90px #700
+    border: 45px solid black
+    &:after,
+    &:before
+      background: linear-gradient(-45deg, #ef6b19, orange)
+
+.win-scale,
+.win-scale-blue
+  transition: .3s ease
+  //transform: scaleX(-1) rotate(180deg) !important
+
+  &._add
+    animation: 1s scale infinite
+
+
+@keyframes flame
+  0%
+    height: 200px
+    width: 200px
+  50%
+    height: 180px
+    width: 180px
+  100%
+    height: 200px
+    width: 200px
+
+
+.opacity
+  opacity: 0
+  visibility: hidden
+  transition: opacity .5s linear, visibility .5s linear
+
+.hidden
+  display: none
+
+.bao__slot.spinning .outer-col:nth-of-type(2) .col
+  animation-delay: 0.1s
+
+
+.bao__slot.spinning .outer-col:nth-of-type(3) .col
+  animation-delay: 0.2s
+
+
+.bao__slot.spinning .col
+  animation: scroll 3s cubic-bezier(.5,0,.5,1) 1, blur 3s cubic-bezier(.5,0,.5,1) 1
+
+.pointer-none
+  pointer-events: none
+
+
+@keyframes visible
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+
+@keyframes scroll
+  0%
+    transform: translate(0,0)
+  //85%
+  //  transform: translate(0,calc(-100% + 535px))
+  100%
+    transform: translate(0,calc(-100% + 585px))
+
+@keyframes blur1
+  0%
+    filter: blur(0)
+  10%
+    filter: blur(0)
+  30%
+    filter: blur(1px)
+  60%
+    filter: blur(1px)
+  80%
+    filter: blur(0)
+
+
+@keyframes wiggle
+  0%
+    transform: rotate(10deg)
+  50%
+    transform: rotate(-10deg)
+  100%
+    transform: rotate(10deg)
+
+@keyframes winSlot
+  0%
+    background: rgba(0, 0, 0, 0)
+  100%
+    background: rgba(0, 0, 0, 0.6)
+
+@keyframes scale
+  0%
+    transform: scale(-1, 1) rotate(180deg)
+  50%
+    transform: scale(-1.03, 1.03) rotate(180deg)
+  100%
+    transform: scale(-1, 1) rotate(180deg)
+
+
+//confetti
+
+@keyframes confetti-slow
+  0%
+    transform: translate3d(0, 0, 0) rotateX(0) rotateY(0)
+
+  100%
+    transform: translate3d(25px, 105vh, 0) rotateX(360deg) rotateY(180deg)
+
+@keyframes confetti-medium
+  0%
+    transform: translate3d(0, 0, 0) rotateX(0) rotateY(0)
+
+  100%
+    transform: translate3d(100px, 105vh, 0) rotateX(100deg) rotateY(360deg)
+
+@keyframes confetti-fast
+  0%
+    transform: translate3d(0, 0, 0) rotateX(0) rotateY(0)
+
+  100%
+    transform: translate3d(-50px, 105vh, 0) rotateX(10deg) rotateY(250deg)
+
+.container-con
+  width: 100vw
+  height: 100vh
+  background: transparent
+  position: absolute
+  top: 0
+  left: 0
+
+.confetti-container
+  perspective: 700px
+  position: absolute
+  overflow: hidden
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+.confetti
+  position: absolute
+  z-index: 1
+  top: -10px
+  border-radius: 0%
+
+  &--animation-slow
+    animation: confetti-slow 4.25s linear 1 forwards
+
+  &--animation-medium
+    animation: confetti-medium 3.75s linear 1 forwards
+
+  &--animation-fast
+    animation: confetti-fast 3.25s linear 1 forwards
+
+
+
