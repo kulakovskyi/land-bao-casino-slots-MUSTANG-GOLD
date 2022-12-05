@@ -158,8 +158,8 @@
         margin: 0
         top: 0
       &__cat
-        bottom: -187px
-        left: -180px
+        bottom: -119px
+        left: -142px
       &__logo
         margin: 0 0 45px 0
         max-width: 191px
@@ -171,6 +171,8 @@
           font-size: 76px
           line-height: 81px
           margin: 0
+        &-top
+          margin: 0 20px 0 0
       &__text
         margin: 0
       &__btn
@@ -221,8 +223,6 @@
     &__info
       transform: scale(0.8)
 
-
-
 @media screen and (max-width: 715px) and (orientation: portrait) and (max-height: 1200px)
   .bao
     &__slot
@@ -265,44 +265,48 @@
       max-width: 134px
       margin: 0 0 20px 0
     &__info
+      padding: 30px 0 30px 0
+      top: 0
       transform: scale(1)
-      position: relative
-      margin-bottom: -210px
-      z-index: 1
+      position: absolute
+      height: 100%
+      z-index: 3
+      //margin-bottom: -210px
       align-items: center
+      flex-direction: column
     &__slot
       transform: scale(0.45)
       transform-origin: center
       top: 0
     &__cat
-      bottom: -420px
-      left: -21px
+      bottom: -290px
+      left: -24px
       z-index: 2
-      width: 536px
-      height: 571px
+      width: 464px
+      height: 419px
     &__title
       margin: 0
       &-top,
       &-bottom
         font-size: 38px
         line-height: 54px
+      &-top
+        margin: 0 10px 0 0
     &__text
       font-size: 18px
       line-height: 38px
+      flex: 1 1 auto
     &__btn
       padding: 7px
       margin: 0
-      position: absolute
-      z-index: 3
-      left: 50%
-      transform: translateX(-50%)
-      top: 82vh
+      bottom: 0
+      align-self: center
       span
         font-size: 20px
         line-height: 25px
         padding: 16px 80px 10px
     &__textWin
-      bottom: -50px
+      bottom: -71px
       line-height: 30px
       text-align: center
       transform: translateX(0)
@@ -311,164 +315,77 @@
       br
         display: block
 
-
-@media screen and (max-width: 550px) and (orientation: portrait) and (max-height: 920px)
-  .bao
-    &__btn
-      top: 490%
-    &__info
-      margin-bottom: -130px
-
-@media screen and (max-width: 550px) and (orientation: portrait) and (max-height: 900px)
-  .bao
-    &__btn
-      top: 493%
-
-
-//@media screen and (max-width: 550px) and (orientation: portrait) and (max-height: 740px)
-//  .bao
-//    &__info
-//      margin-bottom: -65%
-//    &__btn
-//      top: 83.5vh
-
-@media screen and (max-width: 440px) and (orientation: portrait) and (max-height: 750px)
+@media screen and (max-width: 550px) and (orientation: portrait) and (max-height: 750px)
   .bao
     &__info
-      margin-bottom: -220px
-    &__btn
-      top: 422%
+      padding: 30px 0 20px 0
 
-@media screen and (max-width: 440px) and (orientation: portrait) and (max-height: 720px)
-  .bao
-    &__btn
-      top: 420%
-
-@media screen and (max-width: 420px) and (orientation: portrait) and (max-height: 840px)
-  .bao
-    &__btn
-      top: 487%
-
-@media screen and (max-width: 420px) and (orientation: portrait) and (max-height: 740px)
-  .bao
-    &__btn
-      top: 420%
-
-@media screen and (max-width: 400px) and (orientation: portrait) and (max-height: 860px)
+@media screen and (max-width: 550px) and (orientation: portrait) and (min-height: 730px)
   .bao
     &__info
-      margin-bottom: -203px
-    &__btn
-      top: 443%
+      padding: 60px 0 30px 0
 
-@media screen and (max-width: 400px) and (orientation: portrait) and (max-height: 790px)
+@media screen and (max-width: 550px) and (orientation: portrait) and (min-height: 780px)
   .bao
     &__info
-      margin-bottom: -203px
-    &__btn
-      top: 437%
+      padding: 80px 0 45px 0
 
-@media screen and (max-width: 400px) and (orientation: portrait) and (max-height: 730px)
+@media screen and (max-width: 550px) and (orientation: portrait) and (min-height: 900px)
   .bao
     &__info
-      margin-bottom: -227px
-    &__btn
-      top: 404%
-    &__slot
-      transform: scale(0.42)
+      padding: 90px 0 60px 0
 
-@media screen and (max-width: 400px) and (orientation: portrait) and (max-height: 687px)
-  .bao
-    &__info
-      margin-bottom: -247px
-      margin-top: 30px
-    &__btn
-      top: 380%
-    &__slot
-      transform: scale(0.4)
-
-@media screen and (max-width: 380px) and (orientation: portrait) and (max-height: 740px)
-  .bao
-    &__info
-      margin-top: 30px
-    &__slot
-      transform: scale(0.4)
-    &__btn
-      top: 416%
-
-@media screen and (max-width: 380px) and (orientation: portrait) and (max-height: 670px)
-  .bao
-    &__info
-      margin-bottom: -250px
-    &__btn
-      top: 375%
-
-
-@media screen and (max-width: 380px) and (orientation: portrait) and (max-height: 560px)
-  .bao
-    &__info
-      margin-top: 64px
-      margin-bottom: -69%
-      transform: scale(0.7)
-    &__btn
-      top: 464%
-      transform-origin: center
-    &__cat
-      bottom: -374px
-
-@media screen and (max-width: 377px) and (orientation: portrait)
-  .bao
-    &__firstWin,
-    &__secondWin
-      padding: 95px 25px 35px
-      &-dep
-        font-size: 27px
-        line-height: 37px
-        margin: 0 0 30px 0
-      &-img
-        top: -87px
-        transform: translateX(-50%) scale(1.3)
-      &-btn
-        span
-          font-size: 15px
-
-@media screen and (max-width: 370px) and (max-height: 645px)
-  .bao
-    &__info
-      margin-top: 56px
-
-
-@media screen and (max-width: 330px) and (orientation: portrait) and (max-height: 670px)
+@media screen and (max-width: 550px) and (orientation: portrait) and (max-height: 670px)
   .bao
     &__slot
-      transform: scale(0.35)
-    &__info
-      margin-bottom: -230px
-      margin-top: 66px
+      top: -10px
+
+@media screen and (max-width: 380px) and (orientation: portrait)
+  .bao
+    &__slot
+      transform: scale(0.38)
+    &__btn
+      transform-origin: bottom center
+      transform: scale(0.9)
+
+@media screen and (max-width: 380px) and (orientation: portrait) and (max-height: 600px)
+  .bao
+    &__slot
+      transform: scale(0.38)
+    &__logo
+      max-width: 117px
+      margin: 0 0 7px 0
     &__title
       &-top,
       &-bottom
-        font-size: 35px
-        line-height: 39px
+        font-size: 34px
+        line-height: 49px
+    &__text
+      font-size: 17px
+      line-height: 37px
     &__btn
-      top: 405%
+      transform-origin: bottom center
+      transform: scale(0.8)
+    &__cat
+      left: -58px
 
-@media screen and (max-width: 330px) and (orientation: portrait) and (max-height: 570px)
+@media screen and (max-width: 340px) and (orientation: portrait)
   .bao
-    &__info
-      margin-bottom: -268px
-      margin-top: 91px
-    &__btn
-      top: 365%
+    &__slot
+      transform: scale(0.35)
+
 
 /****************************************LANDSCAPE****************************************************/
 
 @media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
   .container
-    padding: 0 39px 0 51px
+    padding: 0 30px
   .bao
     &__slot
       transform: scale(0.45)
+      transform-origin: center left
+      right: -70px
+      margin: 0
     &__info
       transform: scale(0.55)
     &__firstWin,
@@ -492,13 +409,10 @@
           padding: 17px 42px 11px
 
 @media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 395px)
-  .container
-    padding: 0 38px 0 92px
   .bao
     &__slot
       transform: scale(0.4)
       transform-origin: left center
-      margin: 0 -63% 0 0
     &__info
       transform: scale(0.5)
 
@@ -510,8 +424,6 @@
       transform: scale(0.8)
 
 @media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 350px)
-  .container
-    padding: 0 38px 0 92px
   .bao
     &__firstWin,
     &__secondWin
@@ -519,101 +431,48 @@
       transform: scale(0.7)
     &__slot
       transform: scale(0.35)
-      transform-origin: left center
-      margin: 0 -63% 0 0
     &__info
       transform: scale(0.45)
 
 @media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 300px)
-  .container
-    padding: 0 38px 0 92px
-  .bao
-    &__slot
-      transform: scale(0.3)
-      transform-origin: left center
-      margin: 0 -63% 0 0
-    &__info
-      transform: scale(0.4)
-
-@media screen and (max-width: 830px) and (orientation: landscape) and (max-height: 420px)
-  .bao
-    &__info
-      margin: 0 -8% 0 0
-
-@media screen and (max-width: 795px) and (orientation: landscape) and (max-height: 420px)
-  .container
-    padding: 0 38px 0 55px
-  .bao
-    &__info
-      margin: 0 -9% 0 0
-
-@media screen and (max-width: 765px) and (orientation: landscape) and (max-height: 450px)
-    .bao
-      &__slot
-        transform: scale(0.4)
-        transform-origin: left center
-        margin: 0
-      &__info
-        transform: scale(0.5)
-        margin: 0 -14% 0 0
-
-@media screen and (max-width: 765px) and (orientation: landscape) and (max-height: 395px)
-  .container
-    padding: 0 38px 0 62px
-
-@media screen and (max-width: 765px) and (orientation: landscape) and (max-height: 306px)
-  .container
-    padding: 0 38px 0 85px
-  .bao
-    &__slot
-      transform: scale(0.32)
-    &__info
-      transform: scale(0.45)
-
-@media screen and (max-width: 730px) and (orientation: landscape) and (max-height: 290px)
-  .container
-    padding: 0 38px 0 85px
   .bao
     &__slot
       transform: scale(0.3)
     &__info
       transform: scale(0.4)
 
-//@media screen and (max-width: 700px) and (orientation: landscape) and (max-height: 290px)
-
-@media screen and (max-width: 670px) and (orientation: landscape) and (max-height: 395px)
-  .container
-    padding: 0 38px 0 30px
-    .bao
-      &__slot
-        transform: scale(0.36)
-
-@media screen and (max-width: 670px) and (orientation: landscape) and (max-height: 350px)
-  .container
-    padding: 0 38px 0 30px
-    .bao
-      &__slot
-        transform: scale(0.33)
-
-@media screen and (max-width: 650px) and (orientation: landscape) and (max-height: 400px)
-  .container
-    padding: 0 38px 0 30px
+@media screen and (max-width: 880px) and (orientation: landscape)
   .bao
-    &__info
-      margin: 0 -25% 0 0
+    &__slot
+      right: -21px
 
-@media screen and (max-width: 575px) and (orientation: landscape) and (max-height: 350px)
+@media screen and (max-width: 830px) and (orientation: landscape)
   .bao
-    &__info
-      margin: 0 -31% 0 0
+    &__slot
+      right: 28px
+
+@media screen and (max-width: 780px) and (orientation: landscape)
+  .bao
+    &__slot
+      right: 87px
+
+@media screen and (max-width: 650px) and (orientation: landscape) and (max-height: 390px)
+  .bao
+    &__slot
+      right: 117px
+
+@media screen and (max-width: 570px) and (orientation: landscape) and (max-height: 335px)
+  .bao
+    &__slot
+      right: 145px
+
 
 @media screen and (max-width: 560px) and (orientation: landscape) and (max-height: 400px)
-  .container
-    padding: 0 38px 0 30px !important
   .bao
     &__info
-      margin: 0 -34% 0 0 !important
+      transform: scale(0.4)
     &__slot
       transform: scale(0.33) !important
+      right: 150px
 
 
